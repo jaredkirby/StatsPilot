@@ -1,13 +1,12 @@
-from utils import chat_35_1
+from utils import chat_4_1
 
 from langchain.prompts import (
     ChatPromptTemplate,
     SystemMessagePromptTemplate,
     HumanMessagePromptTemplate,
-    AIMessagePromptTemplate
 )
 
-def get_question_answer(user_input: str, level: int):
+def get_user_question_answer(user_input: str, level: int):
     sys_template = "You are a helpful Statistics expert assisting a student further their understanding."
     sys_message_prompt = SystemMessagePromptTemplate.from_template(sys_template)
     question_template=f'''\
@@ -24,7 +23,7 @@ def get_question_answer(user_input: str, level: int):
         ]
     )
     formatted_answer_prompt = answer_prompt.format_prompt(user_input=user_input).to_messages()
-    llm = chat_35_1
+    llm = chat_4_1
     result = llm(formatted_answer_prompt)
     print("Bot Response:", result.content)
     return result.content
