@@ -15,8 +15,9 @@ st.markdown(
 st.sidebar.title("About")
 st.sidebar.markdown(
     """
-**StatsPilot** provides a selection of prompt refinement tools that help you generate the
-better prompts for ChatGPT.
+**StatsPilot** StatsPilot is a collection of tools designed to assist with statistics class survival. 
+Whether you need help answering an exam question or understanding a statistics concept, 
+StatsPilot has got you covered.
 """
 )
 
