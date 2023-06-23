@@ -8,12 +8,17 @@ from langchain.prompts import (
 )
 
 def get_exam_question_answer(user_input: str):
-    sys_template = "You are a Statistics and data expert taking a statistics exam."
+    sys_template = '''
+    You are a Statistics and data expert taking a statistics exam.
+    Your task is to walk through the thought process and calculations for a given statistics exam question 
+    and provide a clear final answer. Your response should be formatted in markdown for clarity.
+    '''
     sys_message_prompt = SystemMessagePromptTemplate.from_template(sys_template)
     question_template=f'''\
     Exam question:
     {user_input}
-    Please respond by walking through your thought process and calculations step by step then make your final answer very clear.
+    Think through your approach step by step, making sure to show all calculations and formulas used. 
+    Finally, provide a clear and concise final answer to the exam question.
     Format your response in markdown.
     '''
     question_message_prompt = HumanMessagePromptTemplate.from_template(question_template)
