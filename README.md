@@ -1,76 +1,35 @@
 # StatsPilot
 
-StatsPilot is a collection of prompt refinement tools designed to assist you in generating better prompts for ChatGPT. This repository contains code for the StatsPilot application built using Streamlit.
+StatsPilot is a collection of tools designed to assist with statistics class survival. Whether you need help answering an exam question or understanding a statistics concept, StatsPilot has got you covered. This README file provides an overview of the code and its functionalities.
 
-## Introduction
+## Table of Contents
+- [About](#about)
+- [Tools](#tools)
+  - [Answer an Exam Question](#answer-an-exam-question)
+  - [Ask a Question](#ask-a-question)
+- [Author](#author)
 
-The StatsPilot application provides two main tools:
+## About
 
-1. **Answer an Exam Question**: This tool generates an answer to an exam question. Simply copy the question into the input box and click the "Generate" button.
+StatsPilot is a Python-based application built using the Streamlit framework. It offers a user-friendly interface for accessing various statistics tools. With StatsPilot, you can quickly generate answers to exam questions or ask questions to deepen your understanding of statistical concepts.
 
-2. **Ask a Question**: This tool helps answer a statistics question through teaching. Enter your question in the input box, select your skill level, and click the "Generate" button.
+## Tools
 
-## Getting Started
+### Answer an Exam Question
 
-To use the StatsPilot application, follow these steps:
+The "Answer an Exam Question" tool helps you generate an answer to an exam question. Simply copy the question into the input box and click the "Generate" button. StatsPilot will provide you with a response that can assist you in answering the question.
 
-1. Clone the repository:
+### Ask a Question
 
-   ```bash
-   git clone https://github.com/your-username/statspilot.git
-    ```
-2. Install the required dependencies. You can use the following command:
+The "Ask a Question" tool allows you to ask a statistics question and receive an informative response. Enter your question in the input box and select your skill level from the provided options. After clicking the "Generate" button, StatsPilot will generate a detailed answer tailored to your skill level.
 
-    ```bash
-    pip install -r requirements.txt
-    ```
-3. Run the application:
+## Author
 
-    ```bash
-    streamlit run app.py
-    ```
+StatsPilot was created by **Jared Kirby**. You can connect with Jared on the following platforms:
 
-## Usage
+- Twitter: [@Kirby_](https://twitter.com/Kirby_)
+- GitHub: [jaredkirby](https://github.com/jaredkirby)
+- LinkedIn: [Jared Kirby](https://www.linkedin.com/in/jared-kirby/)
+- Portfolio: [www.jaredkirby.me](https://www.jaredkirby.me)
 
-After running the application, you will see a web interface with the following sections:
-
-### Tool Selection
-
-- Use the radio buttons to select the tool you want to use: "Answer an Exam Question" or "Ask a Question."
-
-- A brief explanation of the selected tool will be displayed below the radio buttons.
-
-### Ask a Question (Skill Level)
-
-- If you choose the "Ask a Question" tool, you will be prompted to select your skill level using a slider. The available skill levels are:
-
-  - Beginner's Playground
-  - Inquisitive Explorer
-  - Determined Challenger
-  - Master Statistician
-
-### Input
-
-- Enter your input or question in the text area provided. The input type will vary depending on the selected tool.
-
-### Generate Response
-
-- Click the "Generate" button to generate a response based on your input.
-
-### Output
-
-- The generated response will be displayed below the "Generate" button.
-
-## About the Developer
-
-StatsPilot was built by Jared Kirby. You can find more information about the developer on the following platforms:
-
-- Twitter: [https://twitter.com/Kirby_](https://twitter.com/Kirby_)
-- GitHub: [https://github.com/jaredkirby](https://github.com/jaredkirby)
-- LinkedIn: [https://www.linkedin.com/in/jared-kirby/](https://www.linkedin.com/in/jared-kirby/)
-- Portfolio: [https://www.jaredkirby.me](https://www.jaredkirby.me)
-
----
-
-Feel free to explore the StatsPilot application and use the provided tools to enhance your statistics class experience!
-
+Feel free to reach out to the author for any questions, suggestions, or contributions related to StatsPilot.
