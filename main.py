@@ -58,7 +58,17 @@ tool_types = {
 samples = {
     "Ask a Question": "What is the population of China?",
     "Explain a Concept or Term": "Probability",
-    "Answer an Exam Question": "What is the capital of France?",
+    "Answer an Exam Question": '''\
+A study compared the heights of two groups of individuals, Group A and Group B. 
+The heights (in centimeters) of the participants were recorded as follows:
+
+Group A: 160, 165, 170, 175, 180
+Group B: 165, 170, 175, 180, 185
+
+(a) Calculate the mean height for each group.
+
+(b) Determine whether there is a significant difference in the mean heights between the two groups.
+        ''',
     "Analyze Data": "What is the correlation between height and weight?",
     "Expression to English": "Probability Density Function (PDF): f(x) = (1 / σ√(2π)) * e^(-(x-μ)² / (2σ²))",
 }
