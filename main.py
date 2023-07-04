@@ -3,7 +3,7 @@ from langchain.chat_models import ChatOpenAI
 
 import tools.exam_answer as exam_answer, tools.user_question as user_question, tools.explain as explain, tools.translate as translate
 from utils.stream import StreamHandler
-from secret import OPENAI_API_KEY
+openai_api_key = st.secrets["OPENAI_API_KEY"]
 
 
 PAGE_TITLE = "StatsPilot"
@@ -17,7 +17,7 @@ def create_chat(temperature, model, stream_handler):
     chat = ChatOpenAI(
         temperature=temperature, 
         model=model, 
-        openai_api_key=OPENAI_API_KEY, 
+        openai_api_key=openai_api_key, 
         request_timeout=250,
         streaming=True, 
         callbacks=[stream_handler]
