@@ -1,5 +1,3 @@
-from utils import chat_4_0
-
 from langchain.prompts import (
     ChatPromptTemplate,
     SystemMessagePromptTemplate,
@@ -7,7 +5,7 @@ from langchain.prompts import (
     AIMessagePromptTemplate
 )
 
-def get_exam_question_answer(user_input: str):
+def get_exam_question_answer(chat, user_input: str):
     sys_template = '''
     You are a Statistics and data expert taking a statistics exam.
     Your task is to walk through the thought process and calculations for a given statistics exam question 
@@ -32,7 +30,7 @@ def get_exam_question_answer(user_input: str):
         ]
     )
     formatted_answer_prompt = answer_prompt.format_prompt(user_input=user_input).to_messages()
-    llm = chat_4_0
+    llm = chat
     result = llm(formatted_answer_prompt)
     print("Bot Response:", result.content)
     return result.content

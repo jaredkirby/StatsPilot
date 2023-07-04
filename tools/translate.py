@@ -5,8 +5,6 @@ This would help students with understanding complex mathematical notation and ex
 in mathematical terms.
 '''
 
-from utils import chat_4_0
-
 from langchain.prompts import (
     ChatPromptTemplate,
     SystemMessagePromptTemplate,
@@ -14,7 +12,7 @@ from langchain.prompts import (
     AIMessagePromptTemplate
 )
 
-def get_expression_to_english(user_input: str, user_context: str):
+def get_expression_to_english(chat, user_input: str, user_context: str):
     sys_template = '''\
     You are a linguist specializing in mathematical language translation.
     Your task is to accurately translate a mathematical expression into plain English, given contextual details 
@@ -44,8 +42,7 @@ def get_expression_to_english(user_input: str, user_context: str):
         user_input=user_input, 
         user_context=user_context
         ).to_messages()
-    llm = chat_4_0
+    llm = chat
     result = llm(formatted_prompt)
-    print("Bot Response:", result.content)
     return result.content
 

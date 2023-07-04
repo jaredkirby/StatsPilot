@@ -1,12 +1,10 @@
-from utils import chat_4_1
-
 from langchain.prompts import (
     ChatPromptTemplate,
     SystemMessagePromptTemplate,
     HumanMessagePromptTemplate,
 )
 
-def get_explenation(user_input: str, level: int):
+def get_explanation(chat, user_input: str, level: int):
     sys_template = f'''\
     You are a helpful Statistics expert assisting a student further their understanding.
     Your task is to explain "{user_input}" in a step-by-step manner, using practical examples to help illustrate its applications. 
@@ -19,7 +17,6 @@ def get_explenation(user_input: str, level: int):
     Could you please explain "{user_input}" in a step-by-step manner, using practical examples to help illustrate its applications? 
     Please tailor your explanation to a {level} grade level and break it down into smaller, digestible parts. 
     Additionally, if possible, could you please recommend any further resources that may deepen my understanding of {user_input}?
-    Please format your response in markdown.
     '''
     human_prompt = HumanMessagePromptTemplate.from_template(human_template)
     chat_prompt = ChatPromptTemplate.from_messages(
@@ -29,7 +26,7 @@ def get_explenation(user_input: str, level: int):
         ]
     )
     formatted_prompt = chat_prompt.format_prompt(user_input=user_input, level=level).to_messages()
-    llm = chat_4_1
+    llm = chat
     result = llm(formatted_prompt)
     print("Bot Response:", result.content)
     return result.content
