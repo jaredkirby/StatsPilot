@@ -1,19 +1,17 @@
 from langchain.callbacks.base import BaseCallbackHandler
-from langchain.chat_models import ChatOpenAI
-from langchain.schema import HumanMessage
-import streamlit as st
+
 
 class StreamHandler(BaseCallbackHandler):
     def __init__(self, container, initial_text=""):
         self.container = container
-        self.text=initial_text
-        
+        self.text = initial_text
+
     def on_llm_new_token(self, token: str, **kwargs) -> None:
-        self.text+=token
-        self.container.markdown(self.text) 
+        self.text += token
+        self.container.markdown(self.text)
 
 
-'''
+"""
 query=st.text_input("input your query",value="Tell me a joke")
 ask_button=st.button("ask") 
 
@@ -29,4 +27,4 @@ if query and ask_button:
     response = chat([HumanMessage(content=query)])    
     llm_response = response.content  
     st.markdown(llm_response)
-'''
+"""
