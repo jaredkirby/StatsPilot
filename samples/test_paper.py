@@ -1,4 +1,4 @@
-paper = '''
+paper = """
 Title: Impact of Climate Change on Global Agricultural Productivity: A Quantitative Analysis
 
 Abstract
@@ -34,4 +34,4 @@ The study presents robust evidence of the deleterious effects of climate change 
 References
 
 [References to related works and sources of data]
-'''
+"""
